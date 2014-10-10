@@ -1,0 +1,35 @@
+// Place all the styles related to the Traineeships controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+li {
+	float: right;
+	color: #FFFFFF;
+}
+
+a:link{
+	display: inline-block;
+	width: 150px;
+	font-weight: bold;
+	color: #FFFFFF;
+	}
+
+.navbar{
+	display: block;
+	height: 50px;
+	background-color: #0A8FA7
+}
+
+h1 {
+	text-align: center;
+}
+
+.create{
+	color: black;
+}

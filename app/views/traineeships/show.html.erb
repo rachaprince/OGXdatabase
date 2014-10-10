@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @traineeship.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @traineeship.end %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @traineeship.name %>
+</p>
+
+<p>
+  <strong>Evaluation:</strong>
+  <%= @traineeship.evaluation %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @traineeship.notes %>
+</p>
+
+<%= link_to 'Edit', edit_traineeship_path(@traineeship) %> |
+<%= link_to 'Back', traineeships_path %>

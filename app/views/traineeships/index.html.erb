@@ -1,0 +1,36 @@
+<div class="navbar"> <ul> <li> <a href="#">Home </a> <a href="#">Contact Us </a> <a href="#">Login </a></div>
+
+<h1>TN Database</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Start</th>
+      <th>End</th>
+      <th>Name</th>
+      <th>Evaluation</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @traineeships.each do |traineeship| %>
+      <tr>
+        <td><%= traineeship.start %></td>
+        <td><%= traineeship.end %></td>
+        <td><%= traineeship.name %></td>
+        <td><%= traineeship.evaluation %></td>
+        <td><%= traineeship.notes %></td>
+        <td><%= link_to 'Show', traineeship %></td>
+        <td><%= link_to 'Edit', edit_traineeship_path(traineeship) %></td>
+        <td><%= link_to 'Destroy', traineeship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div class="create">
+<%= link_to 'New Traineeship', new_traineeship_path %>
+</div>
