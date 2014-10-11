@@ -10,7 +10,38 @@
       </ul>
     </div>
   <% end %>
-
+   <div class="field">
+    <%= f.label :ep_name %><br>
+    <%= f.text_field :ep_name%>
+  </div>
+   <div class="field">
+    <%= f.label :ep_email %><br>
+    <%= f.text_field :ep_email %>
+  </div>
+  <div class="field">
+    <%= f.label :manager_name %><br>
+    <%= f.text_field :manager_name %>
+  </div>
+  <div class="field">
+    <%= f.label :manager_email %><br>
+    <%= f.text_field :manager_email %>
+  </div>
+  <div class="field">
+    <%= f.label :region %><br>
+    <%= f.text_field :region %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+   <div class="field">
+    <%= f.label :lc %><br>
+    <%= f.text_field :lc %>
+  </div>
+   <div class="field">
+    <%= f.label :tn_name %><br>
+    <%= f.text_field :tn_name %>
+  </div>
   <div class="field">
     <%= f.label :start %><br>
     <%= f.date_select :start %>
@@ -19,19 +50,23 @@
     <%= f.label :end %><br>
     <%= f.date_select :end %>
   </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+   <div class="field">
+    <%= f.label :rate_lc %><br>
+    <%= f.text_field :rate_lc %>
   </div>
-  <div class="field">
-    <%= f.label :evaluation %><br>
-    <%= f.text_field :evaluation %>
+   <div class="field">
+    <%= f.label :rate_tn %><br>
+    <%= f.text_field :rate_tn %>
   </div>
-  <div class="field">
-    <%= f.label :notes %><br>
-    <%= f.text_field :notes %>
+   <div class="field">
+    <%= f.label :tn_comments %><br>
+    <%= f.text_field :tn_comments %>
   </div>
-  <div class="actions">
+   <div class="field">
+    <%= f.label :aiesec_comments %><br>
+    <%= f.text_field :aiesec_comments %>
+  </div>
+    <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>

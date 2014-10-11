@@ -11,16 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141010194543) do
+ActiveRecord::Schema.define(version: 20141011203529) do
 
   create_table "traineeships", force: true do |t|
+    t.string   "ep_name"
+    t.string   "ep_email"
+    t.string   "manager_name"
+    t.string   "manager_email"
+    t.string   "country"
+    t.string   "lc"
+    t.string   "tn_name"
     t.date     "start"
     t.date     "end"
-    t.string   "name"
-    t.integer  "evaluation"
-    t.string   "notes"
+    t.integer  "rate_lc"
+    t.integer  "rate_tn"
+    t.string   "tn_comments"
+    t.string   "aiesec_comments"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "region"
   end
 
 end

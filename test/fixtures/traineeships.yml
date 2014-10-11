@@ -1,15 +1,31 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  start: 2014-10-10
-  end: 2014-10-10
-  name: MyString
-  evaluation: 
-  notes: MyString
+  ep_name: MyString
+  ep_email: MyString
+  manager_name: MyString
+  manager_email: MyString
+  country: MyString
+  lc: MyString
+  tn_name: MyString
+  start: 2014-10-11
+  end: 2014-10-11
+  rate_lc: 1
+  rate_tn: 1
+  tn_comments: MyString
+  aiesec_comments: MyString
 
 two:
-  start: 2014-10-10
-  end: 2014-10-10
-  name: MyString
-  evaluation: 
-  notes: MyString
+  ep_name: MyString
+  ep_email: MyString
+  manager_name: MyString
+  manager_email: MyString
+  country: MyString
+  lc: MyString
+  tn_name: MyString
+  start: 2014-10-11
+  end: 2014-10-11
+  rate_lc: 1
+  rate_tn: 1
+  tn_comments: MyString
+  aiesec_comments: MyString
