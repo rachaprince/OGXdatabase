@@ -33,3 +33,16 @@ h1 {
 .create{
 	color: black;
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th {
+	height: 50px;
+}
