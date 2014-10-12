@@ -69,6 +69,6 @@ class TraineeshipsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def traineeship_params
-      params.require(:traineeship).permit(:start, :end, :name, :evaluation, :notes)
+      params.require(:traineeship).permit(:ep_name, :ep_email, :manager_name, :manager_email, :region, :country, :lc, :tn_name, :start, :end, :rate_lc, :rate_tn, :tn_comments, :aiesec_comments)
     end
 end
