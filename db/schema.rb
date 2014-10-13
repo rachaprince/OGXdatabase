@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141011203529) do
+ActiveRecord::Schema.define(version: 20141013231627) do
 
   create_table "traineeships", force: true do |t|
     t.string   "ep_name"
@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20141011203529) do
     t.date     "end"
     t.integer  "rate_lc"
     t.integer  "rate_tn"
-    t.string   "tn_comments"
-    t.string   "aiesec_comments"
+    t.text     "tn_comments",     limit: 255
+    t.text     "aiesec_comments", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "region"
