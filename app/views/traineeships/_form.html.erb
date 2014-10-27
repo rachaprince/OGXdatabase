@@ -11,60 +11,50 @@
     </div>
   <% end %>
    <div class="field">
-    <%= f.label :ep_name, label: 'Your Name' %>
-    <%= f.text_field :ep_name%>
+    <%= f.text_field :ep_name, label: 'Your Name' %>
   </div>
    <div class="field">
-    <%= f.label :ep_email, 'Your Email' %>
-    <%= f.text_field :ep_email %>
+    <%= f.email_field :ep_email, label: 'Your Email' %>
   </div>
   <div class="field">
-    <%= f.label :manager_name, 'What was the name of your EP manager or personal AIESECer?' %>
-    <%= f.text_field :manager_name %>
+    <%= f.text_field :manager_name, label: 'What was the name of your EP manager or personal AIESECer?' %> 
   </div>
   <div class="field">
-    <%= f.label :manager_email, 'What was the email address of your EP manager or personal AIESECer?' %><br>
-    <%= f.text_field :manager_email %>
+      <%= f.text_field :manager_email, label: 'What was the email address of your EP manager or personal AIESECer?' %><br>
   </div>
   <div class="field">
-    <%= f.label :region, 'In what region of the world did your internship take place?'%>
-    <%= f.text_field :region %>
+      <%= f.text_field :home_lc, label: 'What is the name of your home AIESEC committee' %> 
   </div>
   <div class="field">
-    <%= f.label :country, 'In what country did your internship take place?' %><br>
-    <%= f.text_field :country %>
+    <%= f.text_field :region, label: 'In what region of the world did your internship take place?'%> 
+  </div>
+  <div class="field">
+    <%= f.text_field :country, label: 'In what country did your internship take place?' %><br>
   </div>
    <div class="field">
-    <%= f.label :lc,  'What was the name of your host committee?'%><br>
-    <%= f.text_field :lc %>
+    <%= f.text_field :lc, label: 'What was the name of your host committee?'%><br>
   </div>
    <div class="field">
-    <%= f.label :tn_name, 'What was the name of the project you worked on?' %><br>
-    <%= f.text_field :tn_name %>
+    <%= f.text_field :tn_name, label: 'What was the name of the project you worked on?' %><br>
   </div>
   <div class="field">
-    <%= f.label :start, 'What was the start date of your internship?' %><br>
-    <%= f.date_select :start %>
+    <%= f.date_select :start, label: 'What was the start date of your internship?' %><br>
   </div>
   <div class="field">
-    <%= f.label :end, 'What was the end date of your internship?' %><br>
+    <%= f.date_select :end, label: 'What was the end date of your internship?' %><br>
     <%= f.date_select :end %>
   </div>
    <div class="field">
-    <%= f.label :rate_lc, 'On a scale of 1-10, how would you rate your host committee?' %><br>
-    <%= f.text_field :rate_lc %>
+    <%= f.number_field :rate_lc, label: 'On a scale of 1-10, how would you rate your host committee?' %><br>
   </div>
    <div class="field">
-    <%= f.label :rate_tn, 'On a scale of 1-10, how would you rate your project?' %><br>
-    <%= f.text_field :rate_tn %>
-    <%= f.label :tn_comments, 'Please give comments about the quality of your internship' %><br>
-    <%= f.text_field :tn_comments %>
-  </div>
+    <%= f.number_field :rate_tn, label: 'On a scale of 1-10, how would you rate your project?' %><br>
+    </div>
+    <div class="field">
+    <%= f.text_area :tn_comments, label: 'Please give comments about the quality of your internship' %><br>
   </div>
    <div class="field">
-   <div class="field">
-    <%= f.label :aiesec_comments, 'Please give any additional comments about the quality of your AIESEC experience overall' %><br>
-    <%= f.text_field :aiesec_comments %>
+    <%= f.text_area :aiesec_comments, label: 'Please give any additional comments about the quality of your AIESEC experience overall' %><br>
   </div>
     <div class="actions">
     <%= f.submit 'Submit', :class=> "btn btn-default" %>
