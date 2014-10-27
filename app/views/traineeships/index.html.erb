@@ -2,7 +2,7 @@
 
 <h1>TN Database</h1>
 
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th>Region</th>
@@ -16,22 +16,28 @@
       <th> Delete TN </th>
       <th colspan="0"></th>
     </tr>
-  </thead>
+  </thead> -->
 
   <tbody>
     <% @traineeships.each do |traineeship| %>
-      <tr>
-        <td><%= traineeship.region %></td>
-        <td><%= traineeship.country %></td>
-        <td><%= traineeship.lc %></td>
-        <td><%= traineeship.tn_name%></td>
-        <td><%= traineeship.rate_lc %></td>
-         <td><%= traineeship.rate_tn %></td>
-        <td><%= link_to 'Show', traineeship %></td>
-        <td><%= link_to 'Edit', edit_traineeship_path(traineeship) %></td>
-        <td><%= link_to 'Destroy', traineeship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+      <div class="traineeship"> 
+        <div class="info region">
+        <%= traineeship.region %>
+        </div>
+        <div class="info country">
+        <%= traineeship.country %>
+        </div>
+        <div class="info lc">
+        <%= traineeship.lc %>
+        <%= traineeship.tn_name%>
+         </div>
+         <div class="info rate_lc">
+        <%= traineeship.rate_lc %>
+        </div>
+         <div class="info rate_tn">
+         <%= traineeship.rate_tn %>
+        </div>  
+      <% end %>
   </tbody>
 </table>
 

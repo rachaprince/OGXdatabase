@@ -1,4 +1,4 @@
-<%= form_for(@traineeship) do |f| %>
+<%= bootstrap_form_for(@traineeship) do |f| %>
   <% if @traineeship.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@traineeship.errors.count, "error") %> prohibited this traineeship from being saved:</h2>
@@ -11,62 +11,62 @@
     </div>
   <% end %>
    <div class="field">
-    <%= f.label :ep_name %><br>
+    <%= f.label :ep_name, 'Your Name' %><br>
     <%= f.text_field :ep_name%>
   </div>
    <div class="field">
-    <%= f.label :ep_email %><br>
+    <%= f.label :ep_email, 'Your Email' %><br>
     <%= f.text_field :ep_email %>
   </div>
   <div class="field">
-    <%= f.label :manager_name %><br>
+    <%= f.label :manager_name, 'What was the name of your EP manager or personal AIESECer?' %><br>
     <%= f.text_field :manager_name %>
   </div>
   <div class="field">
-    <%= f.label :manager_email %><br>
+    <%= f.label :manager_email, 'What was the email address of your EP manager or personal AIESECer?' %><br>
     <%= f.text_field :manager_email %>
   </div>
   <div class="field">
-    <%= f.label :region %><br>
+    <%= f.label :region, 'In what region of the world did your internship take place?'%><br>
     <%= f.text_field :region %>
   </div>
   <div class="field">
-    <%= f.label :country %><br>
+    <%= f.label :country, 'In what country did your internship take place?' %><br>
     <%= f.text_field :country %>
   </div>
    <div class="field">
-    <%= f.label :lc %><br>
+    <%= f.label :lc,  'What was the name of your host committee?'%><br>
     <%= f.text_field :lc %>
   </div>
    <div class="field">
-    <%= f.label :tn_name %><br>
+    <%= f.label :tn_name, 'What was the name of the project you worked on?' %><br>
     <%= f.text_field :tn_name %>
   </div>
   <div class="field">
-    <%= f.label :start %><br>
+    <%= f.label :start, 'What was the start date of your internship?' %><br>
     <%= f.date_select :start %>
   </div>
   <div class="field">
-    <%= f.label :end %><br>
+    <%= f.label :end, 'What was the end date of your internship?' %><br>
     <%= f.date_select :end %>
   </div>
    <div class="field">
-    <%= f.label :rate_lc %><br>
+    <%= f.label :rate_lc, 'On a scale of 1-10, how would you rate your host committee?' %><br>
     <%= f.text_field :rate_lc %>
   </div>
    <div class="field">
-    <%= f.label :rate_tn %><br>
+    <%= f.label :rate_tn, 'On a scale of 1-10, how would you rate your project?' %><br>
     <%= f.text_field :rate_tn %>
   </div>
    <div class="field">
-    <%= f.label :tn_comments %><br>
+    <%= f.label :tn_comments, 'Please give comments about the quality of your internship' %><br>
     <%= f.text_field :tn_comments %>
   </div>
    <div class="field">
-    <%= f.label :aiesec_comments %><br>
+    <%= f.label :aiesec_comments, 'Please give any additional comments about the quality of your AIESEC experience overall' %><br>
     <%= f.text_field :aiesec_comments %>
   </div>
     <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Submit', :class=> "btn btn-default" %>
   </div>
 <% end %>

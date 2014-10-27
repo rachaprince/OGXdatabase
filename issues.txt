@@ -1,0 +1,37 @@
+//Form changes
+1. home LC
+2. Change labels in form
+3. Increase text box sizes
+4. Reworded full phrase
+5. tn comments, host lc comments, general anything you would like to tell us
+6. add host to host lc
+7. Your name
+8. Your email
+9. EP manager name (Your personal AIESECer)
+10.  Your Home LC #3
+11. host lc (where you went)
+??12. Date only months?
+13. Setence --scale 1-10 
+14 after that LC comments
+15. TN same thing
+16. additional comments follow
+
+//Index page
+1. add home lc
+2. possible different views for different searches??
+3. Sort by each column
+4. click on it, boxes it 
+5. Colors ratings 
+6. View LC /Country/ Region
+7. Need Name of EP
+8. First Name Last initial?
+9. Averages scores, shows outliers for LC
+10. Hover over LC, Country, Average Score, is it clickable 
+11. average over time, filter a certain project year. graph average per year
+12. AIESEC prague, 42 EPs recieved, average 
+13. Short bio for the LC
+
+//Authentication
+1. VPOGX checks before submission
+
+//

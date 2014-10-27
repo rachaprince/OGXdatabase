@@ -1,0 +1,10 @@
+//navbar
+<a href="http://example.com/page.html#foo">Jump to #foo on page.html</a>
+
+Page jumps are done by using the name attribute of the a element. So, say you wanted a link to the top of your page, you would add an anchor like this near the top of your document (inside the <body> element, of course):
+
+<a name="top"></a>
+
+There doesn’t need to be anything between the opening and closing tags. Then, in the place you want to place the link, put
+
+<a href="#top">link to top</a>
