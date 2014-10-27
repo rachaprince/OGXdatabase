@@ -1,4 +1,4 @@
-<%= bootstrap_form_for(@traineeship) do |f| %>
+<%= bootstrap_form_for(@traineeship, layout: :inline) do |f| %>
   <% if @traineeship.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@traineeship.errors.count, "error") %> prohibited this traineeship from being saved:</h2>
@@ -11,15 +11,15 @@
     </div>
   <% end %>
    <div class="field">
-    <%= f.label :ep_name, 'Your Name' %><br>
+    <%= f.label :ep_name, label: 'Your Name' %>
     <%= f.text_field :ep_name%>
   </div>
    <div class="field">
-    <%= f.label :ep_email, 'Your Email' %><br>
+    <%= f.label :ep_email, 'Your Email' %>
     <%= f.text_field :ep_email %>
   </div>
   <div class="field">
-    <%= f.label :manager_name, 'What was the name of your EP manager or personal AIESECer?' %><br>
+    <%= f.label :manager_name, 'What was the name of your EP manager or personal AIESECer?' %>
     <%= f.text_field :manager_name %>
   </div>
   <div class="field">
@@ -27,7 +27,7 @@
     <%= f.text_field :manager_email %>
   </div>
   <div class="field">
-    <%= f.label :region, 'In what region of the world did your internship take place?'%><br>
+    <%= f.label :region, 'In what region of the world did your internship take place?'%>
     <%= f.text_field :region %>
   </div>
   <div class="field">
@@ -57,11 +57,11 @@
    <div class="field">
     <%= f.label :rate_tn, 'On a scale of 1-10, how would you rate your project?' %><br>
     <%= f.text_field :rate_tn %>
-  </div>
-   <div class="field">
     <%= f.label :tn_comments, 'Please give comments about the quality of your internship' %><br>
     <%= f.text_field :tn_comments %>
   </div>
+  </div>
+   <div class="field">
    <div class="field">
     <%= f.label :aiesec_comments, 'Please give any additional comments about the quality of your AIESEC experience overall' %><br>
     <%= f.text_field :aiesec_comments %>
