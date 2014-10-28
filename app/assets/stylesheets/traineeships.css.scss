@@ -26,8 +26,9 @@ a:link{
 	background-color: #0A8FA7
 }
 
-h1 {
-	text-align: center;
+.input {
+	margin: auto;
+	width: 75%;
 }
 
 .create{
@@ -68,4 +69,8 @@ form{
 
 label {
 	display: block;
+}
+
+h1 {
+	text-align: center;
 }
