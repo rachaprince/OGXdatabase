@@ -26,9 +26,21 @@ a:link{
 	background-color: #0A8FA7
 }
 
+h1 {
+	font-family: "New Cycle"
+}
 .input {
-	margin: auto;
-	width: 75%;
+	border: 3px solid #E4E4E4;
+	border-radius: 10px;
+	font-family: "News Cycle";
+	font-size: 16px;
+	background-color: #F7F7F7;
+	 /* background: -webkit-linear-gradient(#A8AA9B, #7B7D80); For Safari 5.1 to 6.0
+	   background: -o-linear-gradient(#A8AA9B, #7B7D80); For Opera 11.1 to 12.0
+	   background: -moz-linear-gradient(#A8AA9B, #7B7D80); For Firefox 3.6 to 15
+	   background: linear-gradient(#A8AA9B, #7B7D80); Standard syntax */
+	/* margin: auto; */
+	/* width: 75%; */
 }
 
 .create{

@@ -1,3 +1,13 @@
+//11.1.2014
+1. add host commit comments
+2. give->provide
+3. Hover over country, gives number of exchanges , average number, click on country, fills in search functions 
+4. movile version no map
+5. highlight region, see opportunities in europe, zooms in to region, hover over countries 
+6. Gray not AIESEC countreis 
+7. Others no exchanges to date 
+
+
 //Form changes
 1. home LC
 2. Change labels in form

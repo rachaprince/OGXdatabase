@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141027001212) do
+ActiveRecord::Schema.define(version: 20141102184826) do
 
   create_table "traineeships", force: true do |t|
     t.string   "ep_name"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20141027001212) do
     t.datetime "updated_at"
     t.string   "region"
     t.string   "home_lc"
+    t.string   "tn_type"
+    t.text     "lc_comments"
   end
 
 end

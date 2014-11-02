@@ -1,4 +1,4 @@
-<%= bootstrap_form_for(@traineeship, layout: :inline) do |f| %>
+<%= bootstrap_form_for(@traineeship) do |f| %>
   <% if @traineeship.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@traineeship.errors.count, "error") %> prohibited this traineeship from being saved:</h2>
@@ -10,57 +10,97 @@
       </ul>
     </div>
   <% end %>
-  <div class="col-md-4">
-   <div class="field">
-    <%= f.text_field :ep_name, label: 'Your Name' %>
-  </div>
-   <div class="field">
-    <%= f.email_field :ep_email, label: 'Your Email' %>
-  </div>
-  <div class="field">
-    <%= f.text_field :manager_name, label: 'What was the name of your EP manager or personal AIESECer?' %> 
-  </div>
-  <div class="field">
-      <%= f.text_field :manager_email, label: 'What was the email address of your EP manager or personal AIESECer?' %><br>
-  </div>
-  </div>
-  <div class="col-md-4">
-  <div class="field">
-      <%= f.text_field :home_lc, label: 'What is the name of your home AIESEC committee' %> 
-  </div>
-  <div class="field">
-    <%= f.text_field :region, label: 'In what region of the world did your internship take place?'%> 
-  </div>
-  <div class="field">
-    <%= f.text_field :country, label: 'In what country did your internship take place?' %><br>
-  </div>
-   <div class="field">
-    <%= f.text_field :lc, label: 'What was the name of your host committee?'%><br>
-  </div>
-  </div>
-   <div class="field">
-    <%= f.text_field :tn_name, label: 'What was the name of the project you worked on?' %><br>
-  </div>
-  <div class="field">
-    <%= f.date_select :start, label: 'What was the start date of your internship?' %><br>
-  </div>
-  <div class="field">
-    <%= f.date_select :end, label: 'What was the end date of your internship?' %><br>
-    <%= f.date_select :end %>
-  </div>
-   <div class="field">
-    <%= f.number_field :rate_lc, label: 'On a scale of 1-10, how would you rate your host committee?' %><br>
-  </div>
-   <div class="field">
-    <%= f.number_field :rate_tn, label: 'On a scale of 1-10, how would you rate your project?' %><br>
+
+  <div class="row personal-info">
+     <div class="field col-md-4">
+      <%= f.text_field :ep_name, label: 'Full Name' %>
+     </div>
+     <div class="field col-md-4">
+      <%= f.email_field :ep_email, label: 'E-Mail' %>
+     </div>
+     <div class="field col-md-4">
+       <%= f.text_field :home_lc, label: 'Home LC' %> 
     </div>
-    <div class="field">
-    <%= f.text_area :tn_comments, label: 'Please give comments about the quality of your internship' %><br>
   </div>
-   <div class="field">
-    <%= f.text_area :aiesec_comments, label: 'Please give any additional comments about the quality of your AIESEC experience overall' %><br>
+
+  <div class="row personal-info">
+     <div class="field col-md-6">
+       <%= f.text_field :manager_name, label: 'EP Manager Name' %> 
+      </div>
+      <div class="field col-md-6">
+       <%= f.text_field :manager_email, label: 'EP Manager Email' %><br>
+      </div>
   </div>
-    <div class="actions">
+
+  <div class="row traineeship-info">
+     <div class="field col-md-4">
+    <%= f.text_field :region, label: 'Region'%> 
+    </div>
+    <div class="field col-md-4">
+    <%= f.text_field :country, label: 'Country' %><br>
+     </div>
+    <div class="field col-md-4">
+    <%= f.text_field :lc, label: 'Host LC'%><br>
+    </div>
+  </div>
+
+  <div class="row traineeship-info">
+    <div class="field col-md-6">
+    <%= f.text_field :tn_type, label: 'Internship Type' %><br>
+    </div>
+    <div class="field col-md-6">
+    <%= f.text_field :tn_name, label: 'Project (TN) Name' %><br>
+    </div>
+  </div>
+
+  <div class="row traineeship-info">
+     <div class="field col-md-6">
+     <%= f.date_select :start, label: 'Start Date' %><br>
+     </div>
+     <div class="field col-md-6">
+     <%= f.date_select :end, label: 'End Date' %><br>
+     </div>
+  </div>
+
+  <div class="row feedback">
+   <div class="form-group">
+    <label class="col-sm-10 control-label" for="rate_tn">On a scale from 1 to 10 how would you rate your host LC?</label>
+    <div class="col-sm-2">
+    <input class="form-control" id="rate_lc" name="traineeship[rate_lc]">
+   </div>
+  </div>
+  </div>
+
+  <div class="row feedback">
+   <div class="field col-md-12">
+    <%= f.text_area :lc_comments, label: 'Please provide an explanation for your rating' %>
+    </div>
+  </div>
+
+  <div class="row feeback">
+   <div class="form-group">
+   <label class="col-sm-10 control-label" for="rate_tn">On a scale from 1 to 10 how would you rate your project (TN)?</label>
+   <div class="col-sm-2">
+   <input class="form-control" id="rate_tn" name="traineeship[rate_tn]">
+   </div>
+  </div>
+  </div>
+
+  <div class="row feedback">
+   <div class="field col-md-12">
+    <%= f.text_area :tn_comments, label: 'Please provide an explanation for your rating' %><br>
+    </div>
+  </div>
+
+  <div class="row">
+   <div class="field col-md-12">
+    <%= f.text_area :aiesec_comments, label: 'Please provide any additional comments about the quality of your AIESEC experience overall' %><br>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="actions col-md-1 col-md-offset-5">
     <%= f.submit 'Submit', :class=> "btn btn-default" %>
+  </div>
   </div>
 <% end %>
