@@ -11,28 +11,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141102184826) do
+ActiveRecord::Schema.define(version: 20141127230946) do
+
+  create_table "countries", force: true do |t|
+    t.string   "name"
+    t.integer  "region_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "local_commitees", force: true do |t|
+    t.string   "name"
+    t.integer  "country_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "regions", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "traineeships", force: true do |t|
     t.string   "ep_name"
     t.string   "ep_email"
     t.string   "manager_name"
     t.string   "manager_email"
-    t.string   "country"
-    t.string   "lc"
     t.string   "tn_name"
     t.date     "start"
     t.date     "end"
-    t.integer  "rate_lc"
     t.integer  "rate_tn"
     t.text     "tn_comments",     limit: 255
     t.text     "aiesec_comments", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "region"
     t.string   "home_lc"
     t.string   "tn_type"
     t.text     "lc_comments"
+    t.integer  "country_id"
+    t.integer  "region_id"
+    t.integer  "lc_id"
+    t.string   "homelc_comments"
+    t.integer  "rate_homelc"
   end
 
 end
