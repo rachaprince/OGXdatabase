@@ -30,23 +30,23 @@
 
   <tbody>
     <% @traineeships.each do |traineeship| %>
-      <div class="traineeship"> 
-        <div class="info region">
+      <div class="traineeship row"> 
+        <div class="info region col-md-3">
         <%= traineeship.region %>
         </div>
-        <div class="info country">
+        <div class="info country col-md-3">
         <%= traineeship.country %>
         </div>
-        <div class="info lc">
-        <%= traineeship.lc %>
-        <%= traineeship.tn_name%>
+        <div class="info tn col-md-3">
+        <%= traineeship.tn_name%> <br>
+        <%= traineeship.rate_tn %>
          </div>
-         <div class="info rate_lc">
+        <div class="info lc col-md-3">
+        <%= traineeship.lc %> <br>
         <%= traineeship.rate_lc %>
         </div>
-         <div class="info rate_tn">
-         <%= traineeship.rate_tn %>
-        </div>  
-      <% end %>
+         </div>
+         <%end%>
+        
   </tbody>
 </table>

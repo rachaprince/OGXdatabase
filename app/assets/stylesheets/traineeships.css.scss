@@ -63,9 +63,19 @@ th {
 .traineeship{
 	background-color: #E8E9E4;
 	border-radius: 10px;
-	
+	margin: 10px;
     height: 75px;
   
+}
+
+.info{
+	height: 100%;
+	border-right: dotted black;
+	border-width: 1px;
+}
+
+.traineeship :last-child{
+	border-right: none;
 }
 .banner{
 	text-align: center;
@@ -79,7 +89,7 @@ th {
 .navbar-form{
 }
 
-.navbar-form .form-control {
+.form-group {
 	text-align: center;
 	display:inline;
 }
