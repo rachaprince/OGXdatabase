@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141127230946) do
+ActiveRecord::Schema.define(version: 20141127234649) do
 
   create_table "countries", force: true do |t|
     t.string   "name"
@@ -49,11 +49,12 @@ ActiveRecord::Schema.define(version: 20141127230946) do
     t.string   "home_lc"
     t.string   "tn_type"
     t.text     "lc_comments"
-    t.integer  "country_id"
-    t.integer  "region_id"
-    t.integer  "lc_id"
     t.string   "homelc_comments"
     t.integer  "rate_homelc"
+    t.string   "region"
+    t.string   "country"
+    t.string   "lc"
+    t.integer  "rate_lc"
   end
 
 end

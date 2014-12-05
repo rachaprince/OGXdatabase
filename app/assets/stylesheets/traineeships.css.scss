@@ -1,7 +1,7 @@
 // Place all the styles related to the Traineeships controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-ul{
+/* ul{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -28,7 +28,7 @@ a:link{
 
 h1 {
 	font-family: "New Cycle"
-}
+} */
 .input {
 	border: 3px solid #E4E4E4;
 	border-radius: 10px;
@@ -63,14 +63,26 @@ th {
 .traineeship{
 	background-color: #E8E9E4;
 	border-radius: 10px;
-	padding: 20px;
-	margin: 20px;
+	
     height: 75px;
-    -moz-box-shadow: -10px 5px 5px black;
--webkit-box-shadow: -10px 5px 5px black;
-        box-shadow: -10px 5px 5px black;
+  
+}
+.banner{
+	text-align: center;
+	height: 80%;
 }
 
+.banner img{
+	height: 100%;
+}
+
+.navbar-form{
+}
+
+.navbar-form .form-control {
+	text-align: center;
+	display:inline;
+}
 .info{
 	display: inline-block;
 }
@@ -85,4 +97,8 @@ label {
 
 h1 {
 	text-align: center;
+}
+
+textarea{
+	min-height: 150px;
 }

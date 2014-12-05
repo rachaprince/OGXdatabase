@@ -9,7 +9,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<nav class="navbar navbar-default navbar-static-top navbar-inverse" role="navigation">
+  <div class="container">
+   <ul class="nav navbar-nav navbar-right">
+        <li><a href="/">Home</a></li>
+        <li><%= link_to 'New Traineeship', new_traineeship_url %></li>
+        <li><a href="#">Login</a></li>
+  </div>
+</nav>
 <%= yield %>
 
 </body>
