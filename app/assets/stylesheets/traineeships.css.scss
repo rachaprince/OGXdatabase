@@ -76,6 +76,8 @@ th {
 
 .traineeship :last-child{
 	border-right: none;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
 }
 .banner{
 	text-align: center;
@@ -89,7 +91,12 @@ th {
 .navbar-form{
 }
 
-.form-group {
+
+.expandable{
+	text-align: center;
+}
+form .navbar-form {
+	margin: 0 auto;
 	text-align: center;
 	display:inline;
 }
@@ -111,4 +118,15 @@ h1 {
 
 textarea{
 	min-height: 150px;
+}
+
+.low {
+	background-color: #CB524B;
+}
+.middle{
+	background-color: #E2E820;
+}
+
+.high {
+	background-color: #26F10A;
 }
