@@ -130,3 +130,12 @@ textarea{
 .high {
 	background-color: #26F10A;
 }
+.required .control-label:after {
+  content:"*";
+  color:red;
+}
+
+.form-group.required .control-label:after {
+	content:"*";
+  color:red;
+}
