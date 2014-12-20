@@ -3,6 +3,8 @@ class Traineeship < ActiveRecord::Base
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :ep_email, presence: true,
                     format: { with: VALID_EMAIL_REGEX }
+ validates :manager_email, allow_nil: true,
+ 					 format: { with: VALID_EMAIL_REGEX }  
     validates :region,  presence: true
     validates :country,  presence: true   
     validates :lc, presence: true

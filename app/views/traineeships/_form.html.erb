@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="row personal-info">
-     <div class="field col-md-4">
+     <div class="field col-md-4 required">
       <%= f.text_field :ep_name, label: 'Full Name' %>
      </div>
-     <div class="field col-md-4">
+     <div class="field col-md-4 required">
       <%= f.email_field :ep_email, label: 'E-Mail' %>
      </div>
-     <div class="field col-md-4">
+     <div class="field col-md-4 required">
        <%= f.text_field :home_lc, label: 'Home LC' %> 
     </div>
   </div>
@@ -33,38 +33,38 @@
   </div>
 
   <div class="row traineeship-info">
-     <div class="field col-md-4">
+     <div class="field col-md-4 required">
     <%= f.text_field :region, label: 'Region'%> 
     </div>
-    <div class="field col-md-4">
+    <div class="field col-md-4 required">
     <%= f.text_field :country, label: 'Country' %><br>
      </div>
-    <div class="field col-md-4">
+    <div class="field col-md-4 required">
     <%= f.text_field :lc, label: 'Host LC'%><br>
     </div>
   </div>
 
   <div class="row traineeship-info">
-    <div class="field col-md-6">
+    <div class="field col-md-6 required">
     <%= f.text_field :tn_type, label: 'Internship Type' %><br>
     </div>
-    <div class="field col-md-6">
+    <div class="field col-md-6 required">
     <%= f.text_field :tn_name, label: 'Project (TN) Name' %><br>
     </div>
   </div>
 
   <div class="row traineeship-info">
-     <div class="field col-md-6">
+     <div class="field col-md-6 required">
      <%= f.date_select :start, label: 'Start Date' %><br>
      </div>
-     <div class="field col-md-6">
+     <div class="field col-md-6 required">
      <%= f.date_select :end, label: 'End Date' %><br>
      </div>
   </div>
 
   <div class="row feedback">
    <div class="form-group">
-    <label class="col-sm-10 control-label" for="rate_tn">On a scale from 1 to 10 how would you rate your host LC?</label>
+    <label class="col-sm-10 control-label required" for="rate_tn">On a scale from 1 to 10 how would you rate your host LC?</label>
     <div class="col-sm-2">
     <input class="form-control" id="rate_lc" name="traineeship[rate_lc]">
    </div>
@@ -72,14 +72,14 @@
   </div>
 
   <div class="row feedback">
-   <div class="field col-md-12">
+   <div class="field col-md-12 required">
     <%= f.text_area :lc_comments, label: 'Please provide an explanation for your rating' %>
     </div>
   </div>
 
   <div class="row feeback">
    <div class="form-group">
-   <label class="col-sm-10 control-label" for="rate_tn">On a scale from 1 to 10 how would you rate your project (TN)?</label>
+   <label class="col-sm-10 control-label required" for="rate_tn">On a scale from 1 to 10 how would you rate your project (TN)?</label>
    <div class="col-sm-2">
    <input class="form-control" id="rate_tn" name="traineeship[rate_tn]">
    </div>
@@ -87,14 +87,14 @@
   </div>
 
   <div class="row feedback">
-   <div class="field col-md-12">
+   <div class="field col-md-12 required">
     <%= f.text_area :tn_comments, label: 'Please provide an explanation for your rating' %><br>
     </div>
   </div>
 
  <div class="row feeback">
    <div class="form-group">
-   <label class="col-sm-10 control-label" for="rate_tn">On a scale from 1 to 10 how would you rate your home LC?</label>
+   <label class="col-sm-10 control-label required" for="rate_tn">On a scale from 1 to 10 how would you rate your home LC?</label>
    <div class="col-sm-2">
    <input class="form-control" id="rate_homelc"  name="traineeship[rate_tn]">
    </div>
@@ -102,18 +102,18 @@
   </div>
 
   <div class="row feedback">
-   <div class="field col-md-12">
+   <div class="field col-md-12 required">
     <%= f.text_area :homelc_comments, label: 'Please provide an explanation for your rating' %><br>
     </div>
   </div>
   <div class="row">
-   <div class="field col-md-12">
+   <div class="field col-md-12 required">
     <%= f.text_area :aiesec_comments, label: 'Please provide any additional comments about the quality of your AIESEC experience overall' %><br>
   </div>
   </div>
 
   <div class="row">
-    <div class="actions col-md-1 col-md-offset-5">
+    <div class="actions col-md-1 col-md-offset-5 required">
     <%= f.submit 'Submit', :class=> "btn btn-default" %>
   </div>
   </div>
