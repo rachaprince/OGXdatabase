@@ -1,4 +1,4 @@
-require 'pry'
+
 class TraineeshipsController < ApplicationController
   before_action :set_traineeship, only: [:show, :edit, :update, :destroy]
 

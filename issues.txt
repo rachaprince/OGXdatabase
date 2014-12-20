@@ -1,3 +1,10 @@
+//12.19.2014
+Thoughts
+1. Should have a way for admin to submit blank comments
+2. still need typing to produce options
+
+
+
 //11.1.2014
 1. add host commit comments
 2. give->provide
