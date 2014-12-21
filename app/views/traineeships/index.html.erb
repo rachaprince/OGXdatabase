@@ -31,7 +31,8 @@
 
   <tbody>
     <% @traineeships.each do |traineeship| %>
-      <div class="traineeship row"> 
+  
+      <div class="traineeship row">
         <div class="info region col-md-3">
         <%= traineeship.region %>
          <%= link_to 'Destroy',  { action: :destroy, id: traineeship.id }, method: :delete, data: { confirm: 'Are you sure?' } %>

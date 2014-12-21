@@ -1,10 +1,11 @@
 <%= bootstrap_form_for(@traineeship) do |f| %>
   <% if @traineeship.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@traineeship.errors.count, "error") %> prohibited this traineeship from being saved:</h2>
+      <h2>Please correct the following <%= pluralize(@traineeship.errors.count, "error") %> before submitting your form:</h2>
 
       <ul>
-      <% @traineeship.errors.full_messages.each do |message| %>
+      <% @traineeship.errors.each do |attr,message| %>
+
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -107,7 +108,7 @@
     </div>
   </div>
   <div class="row">
-   <div class="field col-md-12 required">
+   <div class="field col-md-12">
     <%= f.text_area :aiesec_comments, label: 'Please provide any additional comments about the quality of your AIESEC experience overall' %><br>
   </div>
   </div>
