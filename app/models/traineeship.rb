@@ -3,7 +3,7 @@ class Traineeship < ActiveRecord::Base
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates_presence_of :ep_email, message: "Please enter your email.", on: :create
   validates_format_of :ep_email,  with: VALID_EMAIL_REGEX, message: "Please enter a valid email.", on: :create
- validates_format_of :manager_email, with:  VALID_EMAIL_REGEX,  allow_nil: true, message: "Please enter a valid email for your manager or leave it blank.", on: :create
+ validates_format_of :manager_email, allow_nil: true, with:  VALID_EMAIL_REGEX,  message: "Please enter a valid email for your manager or leave it blank.", on: :create
     validates_presence_of :region, message: "Please enter a region for your TN."
     validates_presence_of :country, message: "Please enter a country for your TN."
     validates_presence_of :lc, message: "Please enter an LC for your TN."

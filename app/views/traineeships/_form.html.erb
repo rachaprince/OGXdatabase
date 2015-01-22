@@ -47,7 +47,11 @@
 
   <div class="row traineeship-info">
     <div class="field col-md-6 required">
-    <%= f.text_field :tn_type, label: 'Internship Type' %><br>
+    <label class="control-label" for="tn_type">Internship Type</label>
+    <select class="form-control" id="tn_type" name="traineeship[tn_type]">
+     <option selected="selected" value="OGCP">GCDP</option>
+  <option value="GIP">GIP</option>
+    </select><br>
     </div>
     <div class="field col-md-6 required">
     <%= f.text_field :tn_name, label: 'Project (TN) Name' %><br>
@@ -65,9 +69,20 @@
 
   <div class="row feedback">
    <div class="form-group required">
-    <label class="col-sm-10 control-label required" for="rate_tn">On a scale from 1 to 10 how would you rate your host LC?</label>
+    <label class="col-sm-10 control-label required" for="rate_lc">On a scale from 1 to 10 how would you rate your host LC?</label>
     <div class="col-sm-2">
-    <input class="form-control" id="rate_lc" name="traineeship[rate_lc]">
+    <select class="form-control" id="rate_lc" name="traineeship[rate_lc]">
+     <option selected="selected" value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
    </div>
   </div>
   </div>
@@ -82,7 +97,18 @@
    <div class="form-group required">
    <label class="col-sm-10 control-label required" for="rate_tn">On a scale from 1 to 10 how would you rate your project (TN)?</label>
    <div class="col-sm-2">
-   <input class="form-control" id="rate_tn" name="traineeship[rate_tn]">
+   <select class="form-control" id="rate_tn" name="traineeship[rate_tn]">
+    <option selected="selected" value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
    </div>
   </div>
   </div>
@@ -95,9 +121,20 @@
 
  <div class="row feeback">
    <div class="form-group required">
-   <label class="col-sm-10 control-label required" for="rate_tn">On a scale from 1 to 10 how would you rate your home LC?</label>
+   <label class="col-sm-10 control-label required" for="ratehome_lc">On a scale from 1 to 10 how would you rate your home LC?</label>
    <div class="col-sm-2">
-   <input class="form-control" id="rate_homelc"  name="traineeship[rate_tn]">
+   <select class="form-control" id="rate_homelc"  name="traineeship[rate_homelc]">
+   <option selected="selected" value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
    </div>
   </div>
   </div>
