@@ -4,52 +4,65 @@
  <img src="http://l.rgbimg.com/cache1o34vi/users/f/fa/fangol/600/mnTyDCw.jpg">
 </div>
 
-<div class="expandable">
-<form class="navbar-form" role="search">
-  <div class="form-group">
-    <input type="text" class="form-control" >
-  </div>
-  <button type="submit" class="btn btn-default">Search</button>
-</form>
-</div>
-
-<!-- <table>
+<table>
   <thead>
     <tr>
-      <th>Region</th>
-      <th>Country</th>
-      <th>LC</th>
-      <th>TN Name</th>
-      <th>Rate TN</th>
-      <th>Rate LC </th>
-      <th> View TN </th>
-      <th> Edit TN </th>
-      <th> Delete TN </th>
-      <th colspan="0"></th>
+    	<th> Full Name </th>
+    	<th> Email </th>
+    	<th> Home LC </th>
+    	<th> EP Manager Name </th>
+    	<th> EP Manager Email </th>
+    	<th>Region</th>
+      	<th>Country</th>
+      	<th>Host LC</th>
+      	<th>TN Name</th>
+      	<th>Internship Type </th>
+      	<th>Start Date </th>
+      	<th>End Date </th>
+      	<th>Rate Host LC</th>
+      	<th>Explanation Host LC Rating </th>
+      	<th>Rate TN </th>
+      	<th>Explanation TN Rating </th>
+      	<th>Rate Home LC</th>
+      	<th>Explanation Home LC Rating </th>
+      	<th>Visa Rating</th>
+      	<th>Cultural Rating</th>
+      	<th>Additional Comments</th>
+        <th colspan="0"></th>
     </tr>
-  </thead> -->
+  </thead> 
 
-  <tbody>
+<tbody>
     <% @traineeships.each do |traineeship| %>
   
-      <div class="traineeship row">
-        <div class="info region col-md-3">
-        <%= traineeship.region %>
-         <%= link_to 'Destroy',  { action: :destroy, id: traineeship.id }, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </div>
-        <div class="info country col-md-3">
-        <%= traineeship.country %>
-        </div>
-        <div class="info tn col-md-3 <%=tn_category(traineeship.rate_tn) %>">
-       <%= traineeship.tn_name%> <br>
-        <%= traineeship.rate_tn %>
-         </div>
-        <div class="info lc col-md-3 <%= tn_category(traineeship.rate_lc) %>">
-        <%= traineeship.lc %> <br>
-        <%= traineeship.rate_lc %>
-        </div>
-         </div>
-         <%end%>
+    <tr>
+       <td>  <%= traineeship.ep_name%> </td>
+       <td>  <%= traineeship.ep_email%> </td>
+       <td>  <%= traineeship.manager_name%> </td>
+       <td>  <%= traineeship.manager_email%> </td>
+       <td>   <%= traineeship.region %> </td>
+       <td>  <%= traineeship.country%> </td>
+       <td>  <%= traineeship.lc%> </td>
+       <td>  <%= traineeship.tn_name%> </td>
+       <td>  <%= traineeship.tn_type%> </td>
+       <td>  <%= traineeship.start%> </td>
+       <td>  <%= traineeship.end%> </td>
+       <td>  <%= traineeship.rate_lc%> </td>
+       <td>  <%= traineeship.lc_comments%></td>
+       <td>  <%= traineeship.rate_tn%> </td>
+       <td>  <%= traineeship.tn_comments%> </td> 
+       <td>   <%= traineeship.rate_homelc%> </td>
+       <td>  <%= traineeship.homelc_comments%> </td>
+       <td>  <%= traineeship.visa%> </td>
+       <td>  <%= traineeship.culture%> </td>
+       <td>  <%= traineeship.aiesec_comments%> </td>
+       </tr>
+     <%end%>
+        
+  </tbody>
+</table>
+
+    
         
   </tbody>
 </table>

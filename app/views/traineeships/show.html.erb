@@ -1,29 +1,3 @@
-<p id="notice"><%= notice %></p>
+<h1> Thank you for your submission <h1>
 
-<p>
-  <strong>Start:</strong>
-  <%= @traineeship.start %>
-</p>
-
-<p>
-  <strong>End:</strong>
-  <%= @traineeship.end %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @traineeship.ep_name %>
-</p>
-
-<p>
-  <strong>Evaluation:</strong>
-  <%= @traineeship.tn_comments %>
-</p>
-
-<p>
-  <strong>Notes:</strong>
-  <%= @traineeship.aiesec_comments %>
-</p>
-
-<%= link_to 'Edit', edit_traineeship_path(@traineeship) %> |
-<%= link_to 'Back', traineeships_path %>
+<%= link_to 'Submit Another Form', new_traineeship_path %>

@@ -12,6 +12,13 @@
     </div>
   <% end %>
 
+  <div class="row">
+    <div class="cold-md-12 header">
+      Your Information
+    </div>
+  </div>
+
+
   <div class="row personal-info">
      <div class="field col-md-4 required">
       <%= f.text_field :ep_name, label: 'Full Name' %>
@@ -33,9 +40,25 @@
       </div>
   </div>
 
+  <div class="row">
+    <div class="cold-md-12 header">
+      TN Information
+    </div>
+  </div>
+
   <div class="row traineeship-info">
      <div class="field col-md-4 required">
-    <%= f.text_field :region, label: 'Region'%> 
+      <label class="control-label" for="region">Region</label>
+    <select class="form-control" id="region" name="traineeship[region]">
+     <option selected="selected" value="North America">North America</option>
+      <option value="Central/South America">Central/South America</option>
+      <option value="Europe">Europe</option>
+      <option value="Africa">Africa</option>
+      <option value="Middle East">Middle East</option>
+      <option value="Asia">Asia</option>
+      <option value="Oceania">Oceania</option>
+    </select><br>
+  
     </div>
     <div class="field col-md-4 required">
     <%= f.text_field :country, label: 'Country' %><br>
@@ -49,8 +72,8 @@
     <div class="field col-md-6 required">
     <label class="control-label" for="tn_type">Internship Type</label>
     <select class="form-control" id="tn_type" name="traineeship[tn_type]">
-     <option selected="selected" value="OGCP">GCDP</option>
-  <option value="GIP">GIP</option>
+     <option selected="selected" value="OGCP">GCDP/Global Citizen Program</option>
+  <option value="GIP">GIP/Global Internship Program</option>
     </select><br>
     </div>
     <div class="field col-md-6 required">
@@ -67,14 +90,20 @@
      </div>
   </div>
 
+  <div class="row">
+    <div class="cold-md-12 header">
+      Feedback
+    </div>
+  </div>
+
   <div class="row feedback">
    <div class="form-group required">
     <label class="col-sm-10 control-label required" for="rate_lc">On a scale from 1 to 10 how would you rate your host LC?</label>
     <div class="col-sm-2">
     <select class="form-control" id="rate_lc" name="traineeship[rate_lc]">
      <option selected="selected" value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
+     <option value="2">2</option>
+     <option value="3">3</option>
   <option value="4">4</option>
   <option value="5">5</option>
   <option value="6">6</option>
@@ -89,7 +118,7 @@
 
   <div class="row feedback">
    <div class="field col-md-12 required">
-    <%= f.text_area :lc_comments, label: 'Please provide an explanation for your rating' %>
+    <%= f.text_area :lc_comments, label: 'Please provide an explanation for your rating. In your explanation, please comment on the quality of your airport pickup, housing arrangements, and engagement with the local committe' %>
     </div>
   </div>
 
@@ -115,7 +144,7 @@
 
   <div class="row feedback">
    <div class="field col-md-12 required">
-    <%= f.text_area :tn_comments, label: 'Please provide an explanation for your rating' %><br>
+    <%= f.text_area :tn_comments, label: 'Please provide an explanation for your rating. In your explanation, please comment on the quality of the application process and their responsiveness during your internship.' %><br>
     </div>
   </div>
 
@@ -139,9 +168,52 @@
   </div>
   </div>
 
-  <div class="row feedback">
+
+
+  <div class="row feeback">
+   <div class="form-group required">
+   <label class="col-sm-10 control-label required" for="ratehome_lc">On a scale from 1 to 10 how would you rate the visa application process?</label>
+   <div class="col-sm-2">
+   <select class="form-control" id="visa"  name="traineeship[visa]">
+   <option selected="selected" value="1">N/A</option>
+   <option value="2">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+   </div>
+  </div>
+  </div>
+  <br>
+  <div class="row feeback">
+   <div class="form-group required">
+   <label class="col-sm-10 control-label required" for="ratehome_lc">On a scale from 1 to 10 how would you rate the cultural preparation for your internship?</label>
+   <div class="col-sm-2">
+   <select class="form-control" id="cultural"  name="traineeship[cultural]">
+   <option selected="selected" value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+   </div>
+  </div>
+  </div>
+
+    <div class="row feedback">
    <div class="field col-md-12 required">
-    <%= f.text_area :homelc_comments, label: 'Please provide an explanation for your rating' %><br>
+    <%= f.text_area :homelc_comments, label: 'Please provide an explanation for your rating.' %><br>
     </div>
   </div>
   <div class="row">
@@ -149,6 +221,7 @@
     <%= f.text_area :aiesec_comments, label: 'Please provide any additional comments about the quality of your AIESEC experience overall' %><br>
   </div>
   </div>
+  
 
   <div class="row">
     <div class="actions col-md-1 col-md-offset-5 required">
