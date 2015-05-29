@@ -168,11 +168,16 @@
   </div>
   </div>
 
+    <div class="row feedback">
+   <div class="field col-md-12 required">
+    <%= f.text_area :homelc_comments, label: 'Please provide an explanation for your rating.' %><br>
+    </div>
+  </div>
 
 
   <div class="row feeback">
    <div class="form-group required">
-   <label class="col-sm-10 control-label required" for="ratehome_lc">On a scale from 1 to 10 how would you rate the visa application process?</label>
+   <label class="col-sm-10 control-label required" for="visa">On a scale from 1 to 10 how would you rate the visa application process?</label>
    <div class="col-sm-2">
    <select class="form-control" id="visa"  name="traineeship[visa]">
    <option selected="selected" value="1">N/A</option>
@@ -193,7 +198,7 @@
   <br>
   <div class="row feeback">
    <div class="form-group required">
-   <label class="col-sm-10 control-label required" for="ratehome_lc">On a scale from 1 to 10 how would you rate the cultural preparation for your internship?</label>
+   <label class="col-sm-10 control-label required" for="cultural">On a scale from 1 to 10 how would you rate the cultural preparation for your internship?</label>
    <div class="col-sm-2">
    <select class="form-control" id="cultural"  name="traineeship[cultural]">
    <option selected="selected" value="1">1</option>
@@ -211,11 +216,6 @@
   </div>
   </div>
 
-    <div class="row feedback">
-   <div class="field col-md-12 required">
-    <%= f.text_area :homelc_comments, label: 'Please provide an explanation for your rating.' %><br>
-    </div>
-  </div>
   <div class="row">
    <div class="field col-md-12">
     <%= f.text_area :aiesec_comments, label: 'Please provide any additional comments about the quality of your AIESEC experience overall' %><br>
